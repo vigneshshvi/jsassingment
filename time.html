@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+<body>
+	<script >
+			var today = new Date();
+		var day = today.getDay();
+		var hour= today.getHours();
+		var ses='AM';
+		if (hour==0 ) {
+			hour=12;
+
+		}
+		if (hour>12) {
+			hour=hour-12;
+			ses="PM"
+		}
+		var min= today.getMinutes();
+		var sec = today.getSeconds();
+		var daylist = ["Sunday","Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday"];
+		document.write("CURRENT DAY: "+daylist[day],"<br>CURRENT TIME: " +hour+ses,":",+min,":",+sec);
+		
+		
+		
+	</script>
+
+</body >
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION-3</title>
+  <!--   <link rel="stylesheet" href="QUESTION-3.css"> -->
+  <style type="text/css">
+  .dark{
+    background-color: black;
+    color:white;
+}
+</style>
+</head>
+<body id="dark">
+    <h2 id="head"></h2>
+    <h5 id="time"></h5>
+    <button onclick="changeMode()" id="btn">Switch to dark mode</button>
+    <script >
+    	let name=prompt('Enter your name :','Anonymous')
+document.getElementById('head').innerHTML=`Welcome ${name}`;
+function clock(){
+    let date=new Date();
+    let time=date.toLocaleTimeString();
+    document.getElementById('time').innerText=time; 
+}
+setInterval(clock,1000);
+function changeMode(){
+    let attr=document.getElementById('dark')
+    attr.classList.toggle('dark')
+}</script>
+</body>
+</html>
